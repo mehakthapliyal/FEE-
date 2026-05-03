@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Card Game</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-grid"></div>
+
+  <main class="app-shell">
+    <section class="panel">
+      <nav class="nav-bar">
+        <div>
+          <p class="eyebrow">Smart Memory Challenge</p>
+          <h1>Memory Match Game</h1>
+        </div>
+
+        <div class="nav-actions">
+          <a href="about.html" class="nav-link">About</a>
+          <button id="restartBtn" class="primary-btn">New Game</button>
+        </div>
+      </nav>
+
+      <div class="stats-row">
+        <div class="stat-box">
+          <span>Time</span>
+          <strong id="timer">00:00</strong>
+        </div>
+        <div class="stat-box">
+          <span>Moves</span>
+          <strong id="moves">0</strong>
+        </div>
+        <div class="stat-box">
+          <span>Matches</span>
+          <strong id="matches">0</strong>
+        </div>
+      </div>
+
+      <div id="message" class="message-box">Flip a card to start the game.</div>
+
+      <section id="gameBoard" class="game-board"></section>
+    </section>
+  </main>
+
+  <div id="winModal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-icon">🏆</div>
+      <h2>YOU WON THE GAME</h2>
+      <p id="winText">You completed the game beautifully.</p>
+      <button id="closeModalBtn" class="primary-btn modal-btn">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
